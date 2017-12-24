@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lab2</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+	var numresult; 
+	var str; 
+	function onclicknum(nums) { 
+	str = document.getElementById("nummessege"); 
+	str.value = str.value + nums; 
+	} 
+	function onclickclear() { 
+	str = document.getElementById("nummessege"); 
+	str.value = ""; 
+	} 
+	function onclickresult() { 
+	str = document.getElementById("nummessege"); 
+	numresult = eval(str.value); 
+	str.value = numresult; 
+	} 
+	</script>
+</head>
+<body>
+	<table border="1px"  cellspacing="0" cellpadding="5"  align="center">
+		<tr>
+			<td colspan="3" ><input type="text" id="nummessege" style="height:50px;" /></td>
+			<td><input type="button" name="C" value="c" onclick="onclickclear()"  style="height:50px;width:50px;"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="1" value="1" id="1" onclick="onclicknum(1)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="2" value="2" id="2" onclick="onclicknum(2)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="3" value="3" id="3" onclick="onclicknum(3)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="+" value="+" id="+" onclick="onclicknum('+')" style="height: 50px; width: 50px;"> </td>
+		</tr>
+		<tr>
+			<td><input type="button" name="4" value="4" id="4" onclick="onclicknum(4)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="5" value="5" id="5" onclick="onclicknum(5)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="6" value="6" id="6" onclick="onclicknum(6)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="-" value="-" id="-" onclick="onclicknum('-')"  style="height:50px;width:50px;"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="7" value="7" id="7" onclick="onclicknum(7)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="8" value="8" id="8" onclick="onclicknum(8)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="9" value="9" id="9" onclick="onclicknum(9)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="*" value="*" id="*" onclick="onclicknum('*')"  style="height:50px;width:50px;"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="0" value="0" id="0" onclick="onclicknum(0)"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="." value="." id="." onclick="onclicknum('.')"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="=" value="=" id="result" onclick="onclickresult()"  style="height:50px;width:50px;"></td>
+			<td><input type="button" name="/" value="/" id="/" onclick="onclicknum('/')"  style="height:50px;width:50px;"></td>
+		</tr>
+
+	</table>
+</body>
+</html>
