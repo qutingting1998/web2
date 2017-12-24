@@ -1,0 +1,15 @@
+body{
+	text-align: center;
+}
+img{
+	width: 230px;
+	height: 250px;
+	margin-left: 5px;
+}
+#picScroll{
+	margin: 0 auto;
+	white-space: nowrap;
+	overflow:hidden;
+	width:600px;
+	height: 250px;
+};
