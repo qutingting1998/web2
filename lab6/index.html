@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">		
+		span{
+			float: right;
+		}		
+	</style>
+	<script src="jquery-3.2.1.slim.min.js"></script>  
+	<script type="text/javascript">
+		$(function(){
+			var name=$('#name');
+			var pwd1=$('#password1');
+			var pwd2=$('#password2');
+			var tip1=$('<span>用户名不能为空，请输入用户名</span>');
+			var tip2=$('<span>密码不能为空，请输入密码</span>');
+			var tip3=$('<span>密码与确认密码不一致，请重新输入</span>');
+			tip1.css("color","red");
+			tip2.css("color","red");
+			tip3.css("color","red");
+			name.focus();
+			name.blur(function(){
+				if(name.val()=="")
+				{
+					name.after(tip1);					
+				}
+				else
+					name.siblings()[0].remove();
+			});			
+			pwd1.blur(function(){
+				if(pwd1.val()=="")
+				{
+					pwd1.after(tip2);					
+				}
+				else
+					pwd1.siblings()[0].remove();
+			});
+			pwd2.blur(function(){
+				if(pwd2.val()!=pwd1.val())
+				{
+					pwd2.after(tip3);					
+				}
+				else
+					pwd2.siblings()[0].remove();
+			});
+		})
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><span>用户名：</span></td>
+			<td><input type="text" name="" id="name"></td>			
+		</tr>
+		<tr>
+			<td><span>密码：</span></td>
+			<td><input type="password" name="" id="password1"></td>			
+		</tr>
+		<tr>
+			<td><span>确认密码：</span></td>
+			<td><input type="password" name="" id="password2"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" name="" value="注册" id="btn"></td>
+		</tr>
+	</table>
+</body>
+<ml>
