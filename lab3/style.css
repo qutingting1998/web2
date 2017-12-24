@@ -1,0 +1,23 @@
+*{
+margin:0;
+padding:0;
+}
+#wb{
+	width:300px;
+	margin:0 auto; /* 居中 */
+	font-size:14px;
+	margin-top:15px;
+}
+#one{
+	line-height:1.5em;
+}
+p{
+	height:30px;
+	width: 300px;
+	background:url(images/bg.jpg);
+	margin-bottom: 7px;
+}
+#three{
+    float: right;
+    margin-top: 5px;
+}

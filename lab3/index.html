@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lab3评分</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+        var arr= ["差","不合格","合格","良","优"];
+        var star = document.getElementsByTagName("img");
+		var con = false;
+		function starpic(x){
+			if (con == false) {
+			    var txt = document.getElementById("txt");
+			    for (var i = 0; i < x; i++) {
+			    	if(i<2){
+			    		star[i].src="images/star1.png";
+			    	}
+			        else{
+			        	star[0].src="images/star2.png";
+			        	star[1].src="images/star2.png";
+			        	star[i].src="images/star2.png";
+			        }
+			    }
+			    txt.value = arr[x-1];
+			}
+		}
+		function hide(){
+			if (con == true) {}
+			if (con == false) {
+			    for (var i = 0; i < 5; i++) {
+			        star[i].src = "images/star0.png";
+			    }
+			txt.value = "";
+			}
+		}
+		function qd(x){
+			con=false;
+			hide();
+			starpic(x);
+			con = true;
+		}
+
+	</script>
+</head>
+<body>
+    <div id="wb">
+        <div id="one">
+            <p>宝贝与描述情况（打分匿名）</p>
+            <div id="two">
+                 <img src="images/star0.png" title="1" name="star1" onmouseover="starpic(1)" onmouseout="hide()" onclick="qd(1)" />
+				<img src="images/star0.png" title="2" name="star2" onmouseover="starpic(2)" onmouseout="hide()" onclick="qd(2)" />
+				<img src="images/star0.png" title="3" name="star3" onmouseover="starpic(3)" onmouseout="hide()" onclick="qd(3)" />
+				<img src="images/star0.png" title="4" name="star4" onmouseover="starpic(4)" onmouseout="hide()" onclick="qd(4)" />
+				<img src="images/star0.png" title="5" name="star5" onmouseover="starpic(5)" onmouseout="hide()" onclick="qd(5)" />
+            </div>
+            <form>
+                <textarea cols="40" rows="8" value="" id="txt"></textarea>
+			    <br />
+			    <div id="three"><select>
+			        <option>公开评论</option>
+			    </select></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
